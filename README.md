@@ -12,6 +12,6 @@ Requirements
 Attributes
 ==========
 
-    default['failmail']['from_address'] - Address to display in From: in alert e-mails. (default root@hsotname)
-    default['failmail']['to_address'] - Address to send failure alerts to.
-    default['failmail']['cc_address'] - Additional (comma delimited) addresses to send failure alerts to.
+```default['failmail']['from_address']``` - Address to display in From: in alert e-mails. (default root@hostname)
+```default['failmail']['to_address']``` - Address to send failure alerts to.
+```default['failmail']['cc_address']``` - Additional (comma delimited) addresses to send failure alerts to.
