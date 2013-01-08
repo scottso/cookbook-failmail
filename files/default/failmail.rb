@@ -1,6 +1,5 @@
-require 'rubygems'
 require 'pony'
- 
+
 module SilverLining
   class FailMail < Chef::Handler
  
