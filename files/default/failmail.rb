@@ -10,7 +10,7 @@ module SilverLining
     end
  
     def report
-      unless run_status.success? do
+      unless run_status.success?
         subject = "[CHEF] Run failed on #{node.name}\n"
         message = "#{run_status.formatted_exception}\n"
         message << Array(backtrace).join("\n")
@@ -20,7 +20,6 @@ module SilverLining
         else
           Pony.mail(:to => @to_address, :cc => @cc_address, :from => @from_address, :subject => subject, :body => message)
         end
-        end # Why is this one needed?
       end
     end
   end
