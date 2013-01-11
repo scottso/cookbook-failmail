@@ -10,7 +10,7 @@ module SilverLining
     end
  
     def report
-      unless run_status.success? do
+      unless run_status.success?
         subject = "[CHEF] Run failed on #{node.name}\n"
         message = "#{run_status.formatted_exception}\n"
         message << Array(backtrace).join("\n")
