@@ -10,12 +10,12 @@ module SilverLining
     end
  
     def report
-      unless run_status.success? do
+      unless run_status.success?
         subject = "[CHEF] Run failed on #{node.name}\n"
         message = "#{run_status.formatted_exception}\n"
         message << Array(backtrace).join("\n")
 
-        if cc_address.nil? then 
+        if cc_address.nil?
           Pony.mail(:to => @to_address, :from => @from_address, :subject => subject, :body => message)
         else
           Pony.mail(:to => @to_address, :cc => @cc_address, :from => @from_address, :subject => subject, :body => message)
