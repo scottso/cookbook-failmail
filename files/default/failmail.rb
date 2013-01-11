@@ -20,6 +20,7 @@ module SilverLining
         else
           Pony.mail(:to => @to_address, :cc => @cc_address, :from => @from_address, :subject => subject, :body => message)
         end
+        end # Why is this one needed?
       end
     end
   end
