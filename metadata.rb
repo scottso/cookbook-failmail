@@ -1,3 +1,4 @@
+name             "failmail"
 maintainer       "Scott Lampert"
 maintainer_email "sl724q@att.com"
 license          "Apache 2.0"
